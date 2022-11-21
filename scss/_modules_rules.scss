@@ -1,0 +1,85 @@
+@import "variables";
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.share-block {
+  &__btns-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+  &__share-btn {
+    padding: 8px;
+    font-size: 0;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.21);
+    border-radius: 6px;
+    width: 100%;
+    transition: all 0.25s linear;
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.8);
+      transform: scale(1.05);
+    }
+    i {
+      font-size: 20px;
+    }
+    @media (min-width: $sm-min) {
+      font-size: 16px;
+      i {
+        margin-right: 15px;
+      }
+    }
+    @media (min-width: $md-min) {
+      font-size: 18px;
+    }
+  }
+  &__form {
+    &-label {
+      color: #505050;
+      letter-spacing: 0.5px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    &-input-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 15px;
+      flex-wrap: wrap;
+      gap: 25px;
+      @media (min-width: $md-min) {
+        flex-wrap: nowrap;
+      }
+    }
+    &-input {
+      padding: 14px;
+      font-size: 16px;
+      width: 100%;
+      border-radius: 5px;
+      &:focus {
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  .form-btn {
+    padding: 7px 60px;
+    border: 1px solid transparent;
+    font-size: 18px;
+    &:hover {
+      background-color: transparent;
+      border: 1px solid #ff9f00;
+      color: #ff9f00;
+    }
+    @media (min-width: $md-min) {
+      width: auto;
+    }
+  }
+}
